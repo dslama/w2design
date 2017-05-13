@@ -10,7 +10,9 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script></head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </head>
 
 <style>
     body {background-color: lightgoldenrodyellow;}
@@ -19,7 +21,22 @@
     }
     .panel-heading {
         line-height: 2.429em;
+
     }
+    i.glyphicon, i+.badge {
+        line-height: 1.1em; 
+        vertical-align: middle;
+        margin-right:0.5em;
+    }
+
+    i.glyphicon{font-size: 1.5em;}
+    i+.badge {
+        display: inline-block;
+        width: 2.5em;
+        padding: 7px!important;
+
+    }
+
 </style>
 
 <body>
@@ -38,7 +55,8 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="WarpJS_mainPV_panel0">
-                            <div>
+
+                            <div style="margin-top: 2.429em;">  <!--add space before customers list to panel-heading -->
             
                                 <div class="panel panel-success">
                                     <div class="panel-heading">
@@ -68,6 +86,16 @@
                                 </div>
 
                                     <div class="panel-body">
+                                       <!--Joe row with labels -->
+                                        <div class="row" style="line-height: 2.1em;">
+                                            <div class="col-md-6 col-lg-8 col-xs-6">
+                                                <h4>Joe Doe</h4>
+                                            </div>
+                                            <div class="col-md-3 col-lg-2 col-xs-3 text-right" >
+                                            <a href="#"><i class="glyphicon glyphicon-comment"></i><span class="badge">4</span></div></a>
+                                            <div class="col-md-3 col-lg-2 col-xs-3 text-right" >
+                                            <a href="#"><i class="glyphicon glyphicon-time"></i><span class="badge">6</span></div></a>
+                                        </div>
                                         <ul class="nav nav-tabs">
                                             <li class="active"><a data-toggle="tab"
                                                                   href="#WarpJS_mainPV_panel0_relnItem0_pv_panel0">Basics</a>
