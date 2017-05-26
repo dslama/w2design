@@ -30,18 +30,17 @@
         margin-right:0.5em;
     }
 
-    i.fa{font-size: 1.5em;}
+    i.fa{font-size: 1.6em;}
     i+.badge {
         display: inline-block;
         width: 2.5em;
-        padding: 7px!important;
+        padding: 5px 7px 4px 7px!important;
 
     }
     .spacer {
         padding:1em 0;
     }
     .popover-content    {min-width: 200px;}
-
 
 </style>
 
@@ -53,7 +52,7 @@
         <div class="col-sm-12">
             <ol class="breadcrumb"> Breadcrumb</ol>
             <div class="panel panel-success">
-                <div class="panel-heading"><b>MyComplexShop</b></div>
+                <div class="panel-heading"><strong>MyComplexShop</strong></div>
                 <div class="panel-body">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#WarpJS_mainPV_panel0">Customers</a></li>
@@ -63,9 +62,15 @@
                         <div class="tab-pane fade in active" id="WarpJS_mainPV_panel0">
                             <div >  <!--add space before customers list to panel-heading -->
             
-                               <div class="panel">
+                               <div class="panel panel-success">
                                     <div class="panel-heading">
                                    <!--  customers list to panel-heading -->
+                                   
+
+
+
+
+
                                     <div class="row"> 
                                                    
                                     <div class="col-md-5 col-sm-6 col-xs-12 pull-left" > 
@@ -89,10 +94,11 @@
                                            
                                     <div class="col-md-3 col-sm-2 col-xs-4 col-md-offset-1 " > 
                                     
-                                               <span class="label label-primary" style="font-size: 18px;" >Joe Doe</span>
+                                               <h4>Joe Doe</h4>
                                         </div>    
                                      <div class="col-md-3 col-sm-4 col-xs-8 text-right" > 
-                                   <a href="#" title="Comments" data-toggle="popover" data-html="true" data-placement="auto" 
+                                     <div class="btn-group btn-group-sm">
+                                             <button type="button" class="btn btn-default" > <a href="#" title="Comments" data-toggle="popover" data-html="true" data-placement="auto" 
                                              data-content="<ul class='list-unstyled'>
                                              <li><strong>Comment 1: </strong> Lorem Ipsum<br>
 
@@ -108,22 +114,20 @@
                                             Date: 19.5.2017</em></li></ul>
                                             <a href='#' class='text-primary'>Show all comments <br>(3 more)</a><br>
                                             <a href='#' class='text-success'>Add comments</a>
-                                            "><i class="fa fa-commenting"></i><span class="badge badge-primary">4</span></a>   
-                                         
+                                            "><i class="fa fa-commenting"></i><span class="badge badge-primary">4</span></a>   </button>
                                        
                                       
-                                          <a href="#" title="History" data-html="true" data-toggle="popover" data-placement="auto" 
+                                           <button type="button" class="btn btn-default" >  <a href="#" title="History" data-html="true" data-toggle="popover" data-placement="auto" 
                                            data-content="<ul class='list-unstyled'><li><strong>Created: </strong>user / date
                                             </li><li><strong>Property changed:</strong> user / date / new value
                                             </li><li><strong>Added new child of type x:</strong> user / date
                                             </li></ul>"><i class="fa fa-history"></i><span class="badge">6</span></a>
-                                   
+                                           </button>
 
                                             <div class="btn-group"><button type="button" class="btn btn-danger btn-group-sm" title="<span class='text-danger'><strong>Remove Joe Doe?</strong></span>" data-html="true" data-toggle="popover" data-placement="auto" data-content="<button class='btn btn-danger'>Confirm</button> <button class='btn btn-default'>Cancel</button>">
                                             <span class="glyphicon glyphicon-minus-sign"></span>
                                             </button>   </div>
-                           
-
+                                    </div>
 
 
                                     </div>  
@@ -132,7 +136,57 @@
                                 </div>
 
                                     <div class="panel-body">
-                                   
+                                     <!--                           <div class="row spacer"> 
+                                                   
+                                    <div class="col-md-4 col-sm-6 col-xs-12 pull-left" > 
+                                    <form class="form-inline text-left"> 
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-chevron-left"></span></a></div>
+                                            <select class="form-control" id="WarpJS_mainPV_panel0_relnItem0_select">
+                                                <option>1/10</option>
+                                                <option>2/10</option>
+                                            </select>
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-plus-sign"></span></a></div>
+                                            
+                                        </div>
+                                    </div>
+                                </form> </div>   
+                                           
+                                    <div class="col-md-1 col-sm-3 col-xs-6 col-md-offset-4 text-right" > 
+                                    
+                                               <span class="label label-primary"  style="font-size: 18px;">Joe Doe</span>
+                                        </div>    
+                                     <div class="col-md-3 col-sm-3 col-xs-6  col-offset-4 text-right" > 
+                                            <a href="#"><i class="fa fa-commenting"></i><span class="badge">4</span></a>
+                                      
+                                            <a href="#"><i class="fa fa-history"></i><span class="badge">6</span></a>
+
+                                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                      </button>
+
+
+
+                                    </div>  
+                                </div> -->
+
+
+                                       <!--Joe row with labels 
+                                        <div class="row" style="line-height: 2.1em;">
+
+                                            <div class="col-md-6 col-lg-8 col-xs-6">
+                                               <span class="label label-primary"  style="font-size: 18px;">Joe Doe</span>
+                                            </div>
+                                            <div class="col-md-3 col-lg-2 col-xs-3 text-right" >
+                                            <a href="#"><i class="fa fa-commenting"></i><span class="badge">4</span></div></a>
+                                            <div class="col-md-3 col-lg-2 col-xs-3 text-right" >
+                                            <a href="#"><i class="fa fa-history"></i><span class="badge">6</span></div></a>
+                                        </div>-->
                                         <ul class="nav nav-tabs">
                                             <li class="active"><a data-toggle="tab"
                                                                   href="#WarpJS_mainPV_panel0_relnItem0_pv_panel0">Basics</a>
@@ -207,7 +261,7 @@
                                                         </div>
                                                     </form>
                                                     <div class="panel panel-success">
-                                                        <div class="panel-heading"><b>Address</b></div>
+                                                        <div class="panel-heading"><strong>Address</strong></div>
                                                         <div class="panel-body">
                                                             <ul class="nav nav-tabs">
                                                                 <li class="active"><a data-toggle="tab"
@@ -280,7 +334,7 @@
                                                         </div>
                                                     </form>
                                                     <div class="panel panel-success">
-                                                        <div class="panel-heading"><b>PaymentMethod</b></div>
+                                                        <div class="panel-heading"><strong>PaymentMethod</strong></div>
                                                         <div class="panel-body">
                                                             <ul class="nav nav-tabs"></ul>
                                                             <div class="tab-content"></div>
@@ -306,6 +360,7 @@
         </div>
     </div>
 </div>
+
 <script>
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();   
