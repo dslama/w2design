@@ -1,0 +1,823 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <!-- Search select option -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" /><!-- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>   
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/c0814217c6.js"></script>
+    </head>
+
+<style>
+    
+    .tab-content {
+        margin-top: 10px;
+    }
+    .panel-heading {
+       padding: 3px 15px!important;
+       line-height: 2.429em;
+      //  margin-bottom: 1em;
+    }
+    i.fa, i+.badge {
+        line-height: 1.1em; 
+        vertical-align: middle;
+        margin-right:0.5em;
+
+       
+    }
+
+    i.fa{font-size: 1.6em;}
+    i+.badge {
+        display: inline-block;
+        width: 2.5em;
+        padding: 4px 6px 3px 6px!important;
+      
+        color: #337ab7!important;
+    }
+    .spacer {
+        padding:1em 0;
+    }
+    .popover-content    {min-width: 350px; max-height:270px;overflow-y: auto;}
+
+    .popover-content > hr {margin-top: 5px;}
+
+    /*[id*='#WarpJS'].panel-success>.panel-heading */
+    .btn>a>span.badge.badge-warp{  background-color: #eee;
+    border: 1px #337ab7 solid;
+   }
+.modal-dialog>.nav.fixed-top {
+  position:fixed;    border: 1px #337ab7 solid;
+}
+
+
+
+    button.text-danger {color:#d43f3a!important;}
+    .popover {max-width: 350px;}
+
+    .list-group {max-height:600px;overflow-y: auto;}
+
+    .modal-dialog {z-index:1000;}
+
+     #colorstar { color: #ee8b2d;
+      height:20px; 
+     // padding:10px;
+    }
+    span#select2-WarpJS_mainPV_panel0_relnItem0_select-container     
+     {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 6px 12px;
+   
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+   // border-radius: 4px;
+}
+span.select2-container--default .select2-selection--single {height: 34px;}
+
+.panel-heading .select2-container--default .select2-selection--single {border:none!important; 
+  position: relative; 
+  top:-1px; }/**/
+
+</style>
+
+<body>
+<hr>
+<div class="container" role="main">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ol class="breadcrumb"> Breadcrumb</ol>
+            <div class="panel panel-success">
+                <div class="panel-heading"><strong>MyComplexShop</strong></div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#WarpJS_mainPV_panel0">Customers</a></li>
+                        <li><a data-toggle="tab" href="#WarpJS_mainPV_panel1">Products</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="WarpJS_mainPV_panel0">
+
+    <!--
+                            PANEL-GROUP START 
+             -->
+                            <div  class="panel-group" id="customerAccordion">  
+
+            
+<!--  CUSTOMER JOE PANEL HEADING -->
+
+                               <div class="panel panel-success">
+                                    <div class="panel-heading ">
+                                   <!--  customers list to panel-heading -->
+                             
+ 
+
+
+
+                                    <div class="row"> 
+                                                   
+                                    <div class="col-md-5 col-sm-6 col-xs-12 pull-left" > 
+                                    <form class="form-inline text-left"> 
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-chevron-left"></span></a></div>
+                                            <select class="form-control" id="WarpJS_mainPV_panel0_relnItem0_select"  data-live-search="true">
+                                                <option selected>Joe Doe</option>
+                                                <option>Sue Smith</option>
+                                 <option>Tom Riddle</option>
+                                  <option>John Smith</option>
+                                            </select>
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                            <div class="input-group-addon"><a href="#"><span
+                                                    class="glyphicon glyphicon-plus-sign"></span></a></div>
+                                            
+                                        </div>
+                                    </div>
+                                </form> </div>   
+                                           
+                                    <div class="col-md-3 col-sm-2 col-xs-4 col-md-offset-1 " id="itemPanelHeader"> 
+                                    
+                                     <a href="#WarpJS_mainPV_panel0_relnItem0" data-toggle="collapse">                                        
+                                        <h4>Joe Doe</h4>   
+                                        </a> 
+                                        </div>    
+                                     <div class="col-md-3 col-sm-4 col-xs-8 text-right" > 
+                                     <div class="btn-group btn-group-sm">
+                                             <button type="button" class="btn btn-default" > <a href="#" title="Comments" data-toggle="popover" data-html="true" data-placement="auto" 
+                                             data-content="<div class='nav text-center fixed-top'>
+                                            <a href='#' class='text-primary' data-toggle='modal' data-target='#commentsListModal'> Add / Show all (3) </a><br>
+                                          
+
+                                            <!-- PAGER COMMENTS -->
+                                            <nav>
+                                            <ul class='pager'>
+                                            <li><a href='#' aria-label='Previous' title='Previous'>
+                                            <span aria-hidden='true'>&laquo;</span></a></li>
+                                             
+                                            <li><a href='#' aria-label='Next' title='Next'>
+                                            <span aria-hidden='true'>&raquo;</span></a></li>
+                                            </ul>
+                                            </nav></div>
+                                             <hr> 
+                                             <ul class='list-unstyled'>
+                                             <li><strong>Comment 1: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+                                             <li><strong>Comment 1: </strong> Lorem Ipsum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+                                             <li><strong>Comment 1: </strong> Lorem Ipsum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li></ul>">
+                                            <i class="fa fa-commenting"></i><span class="badge badge-warp">4</span></a>   </button>
+                                       
+                                      
+                                           <button type="button" class="btn btn-default" >  <a href="#" title="History" data-html="true" data-toggle="popover" data-placement="auto" 
+                                           data-content="<div class='nav text-center'>
+                                            <a href='#' class='text-primary' data-toggle='modal' data-trigger='focus' data-target='#historyListModal'>Show all (3) </a><br>
+                                           
+
+                                            <!-- PAGER HISTORY -->
+                                            <nav>
+                                            <ul class='pager'>
+                                            <li><a href='#' aria-label='Previous' title='Previous'>
+                                            <span aria-hidden='true'>&laquo;</span></a></li>
+                                             
+                                            <li><a href='#' aria-label='Next' title='Next'>
+                                            <span aria-hidden='true'>&raquo;</span></a></li>
+                                            </ul>
+                                            </nav>                                            
+                                            </div>
+                                             <hr> 
+                                           <ul class='list-unstyled'><li><strong>Created: </strong>user / date
+                                            </li><li><strong>Property changed:</strong> user / date / new value
+                                            </li><li><strong>Added new child of type x:</strong> user / date
+                                            </li></ul>">
+                                       
+                                            <i class="fa fa-history"></i><span class="badge badge-warp">6</span></a>
+                                           </button>
+
+                                            <div class="btn-group"><button type="button" class="btn btn-default btn-group-sm text-danger" title="<span class='text-danger'><strong>Remove Joe Doe?</strong></span>" data-html="true" data-toggle="popover" data-placement="auto" data-content="<button class='btn btn-danger'>Confirm</button> <button class='btn btn-default'>Cancel</button>">
+                                            <span class="glyphicon glyphicon-minus-sign"></span>
+                                            </button>   </div>
+                                    </div>
+                                    
+                                    <!-- MODAL COMMENTS -->
+<div id="commentsListModal" class="modal modal-default fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Comments content-->
+    <div class="modal-content text-left">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Comments</h4>
+      </div>
+      <div class="modal-body">
+       <h4>Add Comment</h4>
+    <form class='form'>
+    <!-- USER/Password/remember fields-->
+  <!--   
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="user" type="text" class="form-control" name="user" placeholder="User Name">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <br>
+     <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div> -->
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+      <textarea  id="msg" class="form-control" name="msg" rows="5" placeholder="Comment Text"></textarea>
+    </div>
+     <div class="input-group lead evaluation"><div id="colorstar" class="starrr ratable" ></div></div>
+                 
+   <br>
+  <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <hr>
+                                            <ul class='list-group text-primary'>
+      
+                                             <li class='list-group-item'><strong>Comment 1: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+                                             <li class='list-group-item'><strong>Comment 2: </strong> Lorem Ipsum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+                                             <li class='list-group-item'><strong>Comment 3: </strong> Lorem Ipsum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+
+                                             <li class='list-group-item'><strong>Comment 4: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+
+                                             <li class='list-group-item'><strong>Comment 5: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+
+
+                                             <li class='list-group-item'><strong>Comment 6: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>
+
+                                            <em>By: Joe Doe; <br>
+                                            Date: 19.5.2017</em></li>
+
+                                            </ul>
+                                            
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div><!-- END MODAL COMMENTS -->
+
+  <!-- MODAL HISTORY -->
+<div id="historyListModal" class="modal modal-default fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal HISTORY content-->
+    <div class="modal-content text-left">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">History</h4>
+      </div>
+      <div class="modal-body">
+       <h4>View History</h4>
+   
+  
+                                            <ul class='list-group text-primary'>
+      
+                                             <li class='list-group-item'>
+                                             <ul><li><strong>Created: </strong>user / date
+                                            </li><li><strong>Property changed:</strong> user / date / new value
+                                            </li><li><strong>Added new child of type x:</strong> user / date
+                                            </li></ul>
+                                            </li>
+                                            <li class='list-group-item'>
+                                             <ul><li><strong>Created: </strong>user / date
+                                            </li><li><strong>Property changed:</strong> user / date / new value
+                                            </li><li><strong>Added new child of type x:</strong> user / date
+                                            </li></ul>
+                                            </li>
+
+                                            <li class='list-group-item'>
+                                             <ul><li><strong>Created: </strong>user / date
+                                            </li><li><strong>Property changed:</strong> user / date / new value
+                                            </li><li><strong>Added new child of type x:</strong> user / date
+                                            </li></ul>
+                                            </li>
+
+
+                                            </ul>
+                                            
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div><!-- END MODAL HISTORY -->
+
+                                    </div>  
+                                </div> 
+
+                                </div><!-- END CUSTOMER JOE PANEL HEADING -->
+<!-- START COLLAPSE CUSTOMER JOE PANEL BODY -->
+
+<div  id="WarpJS_mainPV_panel0_relnItem0" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                    
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a data-toggle="tab"
+                                                                  href="#WarpJS_mainPV_panel0_relnItem0_pv_panel0">Basics</a>
+                                            </li>
+                                            <li><a data-toggle="tab" href="#WarpJS_mainPV_panel0_relnItem0_pv_panel1" >addresses</a>
+                                            </li>
+                                            <li><a data-toggle="tab" href="#WarpJS_mainPV_panel0_relnItem0_pv_panel2">paymentMethods</a>
+                                            </li>
+                                            <li><a data-toggle="tab"
+                                                   href="#WarpJS_mainPV_panel0_relnItem0_pv_panel3">orders</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active"
+                                                 id="WarpJS_mainPV_panel0_relnItem0_pv_panel0">
+                                                <form class="form-horizontal">
+                                                    <div class="form-group"><label
+                                                            for="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem0"
+                                                            class="col-sm-2 control-label">FirstName</label>
+                                                        <div class="col-sm-10"><input type="text" class="form-control"
+                                                                                      id="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group"><label
+                                                            for="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem1"
+                                                            class="col-sm-2 control-label">LastName</label>
+                                                        <div class="col-sm-10"><input type="text" class="form-control"
+                                                                                      id="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group"><label
+                                                            for="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem2"
+                                                            class="col-sm-2 control-label">DoB</label>
+                                                        <div class="col-sm-10"><input type="text" class="form-control"
+                                                                                      id="WarpJS_mainPV_panel0_relnItem0_pv_panel0_bpItem2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group"><label
+                                                            for="WarpJS_mainPV_panel0_relnItem0_pv_panel0_enumItem0"
+                                                            class="col-sm-2 control-label">CustomerType</label>
+                                                        <div class="col-sm-10"><select class="form-control"
+                                                                                       id="WarpJS_mainPV_panel0_relnItem0_pv_panel0_enumItem0">
+                                                            <option>Private</option>
+                                                            <option>Company</option>
+                                                        </select></div>
+                                                    </div>
+                                                </form>
+                                                <hr>
+                                            </div>
+                                            <div class="tab-pane fade in" id="WarpJS_mainPV_panel0_relnItem0_pv_panel1">
+                                                <div>
+                                                    <form class="form-inline" style="padding-bottom: 10px;">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-chevron-left"></span></a>
+                                                                </div>
+                                                                <select class="form-control"
+                                                                        id="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_select">
+                                                                    <option>very long</option>
+                                                                    <option>short</option>
+                                                                </select>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-chevron-right"></span></a>
+                                                                </div>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-plus-sign"></span></a>
+                                                                </div>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-minus-sign"></span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="panel panel-success">
+                                                        <div class="panel-heading"><strong>Address</strong></div>
+                                                        <div class="panel-body">
+                                                            <ul class="nav nav-tabs">
+                                                                <li class="active"><a data-toggle="tab"
+                                                                                      href="#WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0" >Basics</a>
+                                                                                     
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane fade in active"
+                                                                     id="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0">
+                                                                    <form class="form-horizontal">
+                                                                        <div class="form-group"><label
+                                                                                for="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_bpItem0"
+                                                                                class="col-sm-2 control-label">Street</label>
+                                                                            <div class="col-sm-10"><input type="text"
+                                                                                                          class="form-control"
+                                                                                                          id="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_bpItem0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group"><label
+                                                                                for="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_bpItem1"
+                                                                                class="col-sm-2 control-label">ZIP</label>
+                                                                            <div class="col-sm-10"><input type="text"
+                                                                                                          class="form-control"
+                                                                                                          id="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_bpItem1">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group"><label
+                                                                                for="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_enumItem0"
+                                                                                class="col-sm-2 control-label">Country</label>
+                                                                            <div class="col-sm-10"><select
+                                                                                    class="form-control"
+                                                                                    id="WarpJS_mainPV_panel0_relnItem0_pv_panel1_relnItem0_pv_panel0_enumItem0">
+                                                                                <option>Germany</option>
+                                                                                <option>USA</option>
+                                                                                <option>China</option>
+                                                                                <option>Japan</option>
+                                                                            </select></div>
+                                                                        </div>
+                                                                    </form>
+                                                                    <hr>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade in" id="WarpJS_mainPV_panel0_relnItem0_pv_panel2">
+                                                <div>
+                                                    <form class="form-inline" style="padding-bottom: 10px;">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-chevron-left"></span></a>
+                                                                </div>
+                                                                <select class="form-control"
+                                                                        id="WarpJS_mainPV_panel0_relnItem0_pv_panel2_relnItem0_select">
+                                                                    <option>very long</option>
+                                                                    <option>short</option>
+                                                                </select>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-chevron-right"></span></a>
+                                                                </div>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-plus-sign"></span></a>
+                                                                </div>
+                                                                <div class="input-group-addon"><a href="#"><span
+                                                                        class="glyphicon glyphicon-minus-sign"></span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="panel panel-success">
+                                                        <div class="panel-heading"><strong>PaymentMethod</strong></div>
+                                                        <div class="panel-body">
+                                                            <ul class="nav nav-tabs"></ul>
+                                                            <div class="tab-content"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade in" id="WarpJS_mainPV_panel0_relnItem0_pv_panel3">
+                                                <table class="table table-sm table-hover"
+                                                       id="WarpJS_mainPV_panel0_relnItem0_pv_panel3_relnItem0"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    
+                    
+                                    <!-- END PANEL BODY CUSTOMER JOE -->
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade in" id="WarpJS_mainPV_panel1">
+                            <table class="table table-sm table-hover" id="WarpJS_mainPV_panel1_relnItem0"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+            trigger:'focus',
+            html:true
+        });   
+
+$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+
+
+});
+</script>
+
+<script>  
+// Starrr plugin (https://github.com/dobtco/starrr) can be deleted for now
+var __slice = [].slice;
+
+(function($, window) {
+  var Starrr;
+
+  Starrr = (function() {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      numStars: 5,
+      change: function(e, value) {}
+    };
+
+    function Starrr($el, options) {
+      var i, _, _ref,
+        _this = this;
+
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      _ref = this.defaults;
+      for (i in _ref) {
+        _ = _ref[i];
+        if (this.$el.data(i) != null) {
+          this.options[i] = this.$el.data(i);
+        }
+      }
+      this.createStars();
+      this.syncRating();
+      this.$el.on('mouseover.starrr', 'span', function(e) {
+        return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('mouseout.starrr', function() {
+        return _this.syncRating();
+      });
+      this.$el.on('click.starrr', 'span', function(e) {
+        return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('starrr:change', this.options.change);
+    }
+
+    Starrr.prototype.createStars = function() {
+      var _i, _ref, _results;
+
+      _results = [];
+      for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+        _results.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));
+      }
+      return _results;
+    };
+
+    Starrr.prototype.setRating = function(rating) {
+      if (this.options.rating === rating) {
+        rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+
+    Starrr.prototype.syncRating = function(rating) {
+      var i, _i, _j, _ref;
+
+      rating || (rating = this.options.rating);
+      if (rating) {
+        for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+        }
+      }
+      if (rating && rating < 5) {
+        for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+        }
+      }
+      if (!rating) {
+        return this.$el.find('span').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+      }
+    };
+
+    return Starrr;
+
+  })();
+  return $.fn.extend({
+    starrr: function() {
+      var args, option;
+
+      option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      return this.each(function() {
+        var data;
+
+        data = $(this).data('star-rating');
+        if (!data) {
+          $(this).data('star-rating', (data = new Starrr($(this), option)));
+        }
+        if (typeof option === 'string') {
+          return data[option].apply(data, args);
+        }
+      });
+    }
+  });
+})(window.jQuery, window);
+
+$(function() {
+  return $(".starrr").starrr();
+});
+
+$( document ).ready(function() {
+    
+    var correspondence=["","Really Bad","Bad","Fair","Good","Excelent"];
+      
+  $('.ratable').on('starrr:change', function(e, value){
+   
+     $(this).closest('.evaluation').children('#count').html(value);
+     $(this).closest('.evaluation').children('#meaning').html(correspondence[value]);
+     
+     var currentval=  $(this).closest('.evaluation').children('#count').html();
+     
+    var target=  $(this).closest('.evaluation').children('.indicators');
+    target.css("color","black");
+    target.children('.rateval').val(currentval);
+    target.children('#textwr').html(' ');
+   
+    
+    if(value<3){
+     target.css("color","red").show(); 
+     target.children('#textwr').text('What can be improved?');
+    }else{
+        if(value>3){    
+            target.css("color","green").show(); 
+            target.children('#textwr').html('What was done correctly?');
+        }else{
+       target.hide();  
+        }
+    }
+    
+  });
+  
+  
+  
+ 
+  
+  $('#hearts-existing').on('starrr:change', function(e, value){
+    $('#count-existing').html(value);
+  });
+});
+
+
+
+
+
+$(function () {
+    $('.button-checkbox').each(function () {
+
+        // Settings
+        var $widget = $(this),
+            $button = $widget.find('button'),
+            $checkbox = $widget.find('input:checkbox'),
+            color = $button.data('color'),
+            settings = {
+                on: {
+                    icon: 'glyphicon glyphicon-check'
+                },
+                off: {
+                    icon: 'fa fa-square-o'
+                }
+            };
+
+        // Event Handlers
+        $button.on('click', function () {
+            $checkbox.prop('checked', !$checkbox.is(':checked'));
+            $checkbox.triggerHandler('change');
+            updateDisplay();
+        });
+        $checkbox.on('change', function () {
+            updateDisplay();
+        });
+
+        // Actions
+        function updateDisplay() {
+            var isChecked = $checkbox.is(':checked');
+
+            // Set the button's state
+            $button.data('state', (isChecked) ? "on" : "off");
+
+            // Set the button's icon
+            $button.find('.state-icon')
+                .removeClass()
+                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+            // Update the button's color
+            if (isChecked) {
+                $button
+                    .removeClass('btn-default')
+                    .addClass('btn-' + color + ' active');
+            }
+            else {
+                $button
+                    .removeClass('btn-' + color + ' active')
+                    .addClass('btn-default');
+            }
+        }
+
+        // Initialization
+        function init() {
+
+            updateDisplay();
+
+            // Inject the icon if applicable
+            if ($button.find('.state-icon').length === 0) {
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+            }
+        }
+        init();
+    });
+});
+
+
+</script>
+
+<script>
+
+
+$(function() {
+ 
+
+var panelId = '#'+$('select').attr('id');
+var panelColLink = panelId.slice(0,-7);
+
+
+  $(document).on('change', panelId, function selectItemPanel(){
+
+
+    var item = $(panelId +' option:selected');
+    var itemInd = panelColLink.slice(0,-1)+item.index();
+$('#itemPanelHeader').html('<a href="'+itemInd+'" data-toggle="collapse"><h4>' + item.text()+'</h4> </a>');
+//alert(panelId+'\n'+   panelColLink+'\n'+  item+'\n'+  itemInd+'\n');
+});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  $('select').select2();
+</script> 
+
+ <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script> -->
+
+
+</body>
+</html>
