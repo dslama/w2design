@@ -1,6 +1,7 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -53,7 +54,7 @@
     .popover-content > hr {margin-top: 5px;}
 
     /*[id*='#WarpJS'].panel-success>.panel-heading */
-    .btn>a>span.badge.badge-warp{  background-color: #eee;
+    .btn>a>span.badge.badge-warp, .btn>span.badge.badge-warp{  background-color: #eee;
     border: 1px #337ab7 solid;
    }
 .modal-dialog>.nav.fixed-top {
@@ -159,8 +160,9 @@ span.select2-container--default .select2-selection--single {height: 34px;}
                                         </div>    
                                      <div class="col-md-3 col-sm-4 col-xs-8 text-right" > 
                                      <div class="btn-group btn-group-sm">
-                                             <button type="button" class="btn btn-default" > <a href="#" title="Comments" data-toggle="popover" data-html="true" data-placement="auto" 
-                                             data-content="<div class='nav text-center fixed-top'>
+                                             <button type="button" class="btn btn-default" title="Comments" 
+                                              data-trigger="focus" data-toggle="popover" data-html="true" data-placement="auto" 
+                                             data-content="<div class='nav text-center'>
                                             <a href='#' class='text-primary' data-toggle='modal' data-target='#commentsListModal'> Add / Show all (3) </a><br>
                                           
 
@@ -188,10 +190,10 @@ span.select2-container--default .select2-selection--single {height: 34px;}
 
                                             <em>By: Joe Doe; <br>
                                             Date: 19.5.2017</em></li></ul>">
-                                            <i class="fa fa-commenting"></i><span class="badge badge-warp">4</span></a>   </button>
+                                            <i class="fa fa-commenting text-primary"></i><span class="badge badge-warp">4</span>  </button>
                                        
                                       
-                                           <button type="button" class="btn btn-default" >  <a href="#" title="History" data-html="true" data-toggle="popover" data-placement="auto" 
+                                           <button type="button" class="btn btn-default" title="History" data-html="true" data-toggle="popover" data-placement="auto" 
                                            data-content="<div class='nav text-center'>
                                             <a href='#' class='text-primary' data-toggle='modal' data-trigger='focus' data-target='#historyListModal'>Show all (3) </a><br>
                                            
@@ -213,7 +215,7 @@ span.select2-container--default .select2-selection--single {height: 34px;}
                                             </li><li><strong>Added new child of type x:</strong> user / date
                                             </li></ul>">
                                        
-                                            <i class="fa fa-history"></i><span class="badge badge-warp">6</span></a>
+                                            <i class="fa fa-history text-primary "></i><span class="badge badge-warp">6</span>
                                            </button>
 
                                             <div class="btn-group"><button type="button" class="btn btn-default btn-group-sm text-danger" title="<span class='text-danger'><strong>Remove Joe Doe?</strong></span>" data-html="true" data-toggle="popover" data-placement="auto" data-content="<button class='btn btn-danger'>Confirm</button> <button class='btn btn-default'>Cancel</button>">
